@@ -1,0 +1,202 @@
+/* General */
+* {
+    margin: 0; /*Elina margin reset*/
+    padding: 0;/*Elina padding reset*/
+    box-sizing: border-box; /*Incluye el padding y el borde en el ancho y alto total de los elementos*/ 
+}
+
+body
+{
+    font-family: Poppins, sans-serif; /*Fuente principal*/
+    background-image: url(https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=800&w=800); /*Imagen de fondo*/  
+    background-size: cover; /*Ajusta la imagen de fondo para cubrir todo el viewport*/
+    background-position: center; /*Centra la imagen de fondo*/
+    color: #fff;    /*faltaba el punto y coma*/ /*color de texto blanco por defecto*/
+    background-attachment: fixed; /* <-- Esta línea faltaba */
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8); /*Fondo semitransparente*/
+    padding: 20px; /*Espaciado interno*/
+    text-align: center; /*Centrar el contenido del header*/
+}
+
+header h1 {
+    font-size: 2.5em; /*Tamaño de fuente del título*/
+}
+
+.nav-links {
+    display: flex; /*Usa flexbox para alinear los elementos de la lista*/
+    justify-content: center; /*Centrar los elementos de la lista*/
+    gap: 20px; /*Espacio entre los elementos de la lista*/
+    margin-top: 10px; /*Margen superior para separar del título*/
+}
+
+.nav-links li {
+    list-style: none; /*Quitar los puntos de la lista*/ 
+}
+.nav-links a {
+    color: #fff; /*Color de los enlaces*/
+    text-decoration: none; /*Quitar subrayado de los enlaces*/
+    padding: 8px 15px; /*Espaciado interno de los enlaces*/
+    border-radius: 5px; /*Bordes redondeados*/  
+    transition: background-color 0.3s ease, transform 0.2s; /*Transición suave para el cambio de color de fondo*/
+}
+.nav-links a {
+    color: #fff; /*Color de los enlaces*/
+    text-decoration: none; /*Quitar subrayado de los enlaces*/
+    padding: 8px 15px; /*Espaciado interno de los enlaces*/
+    border-radius: 5px; /*Bordes redondeados*/  
+    transition: background-color 0.3s ease, transform 0.2s; /*Transición suave para el cambio de color de fondo*/
+}
+
+.nav-links a:hover {
+    background-color: #e60000;/*Color de fondo al pasar el mouse*/
+    transform: scale(1.05); /*Efecto de zoom al pasar el mouse*/
+}
+
+.layout-grid {
+    display: grid; /*Usa grid para el layout*/
+    grid-template-areas:
+    "aside main"
+    "footer footer"; /*Define las áreas del grid*/
+    grid-template-columns: 250px 1fr; /*Columna fija a la izquierda y flexible a la derecha*/
+    gap: 20px; /*Espacio entre las áreas del grid*/
+    padding: 20px; /*Espaciado interno del grid*/
+}
+
+/*Aside*/
+aside {
+    grid-area: aside; /*Define el área del grid para el aside*/
+    background: rgba(255, 255, 255, 0.1); /*Fondo claro y traslucido*/
+    padding: 20px; /*Espaciado interno del aside*/
+    border-radius: 10px; /*Bordes redondeados*/
+
+}
+
+aside ul {
+    list-style: none; /*Quitar los puntos de la lista*/
+    padding-left: 10px; /*indentacion a la izquierda*/
+}
+
+aside a {
+    font-weight: bold; /*Negrita para los enlaces*/
+    font-size: 1.2rem;/*Tamaño de fuente de los enlaces*/
+    text-transform: uppercase; /*Transformar a mayúsculas*/
+    text-decoration: none; /*Quitar subrayado de los enlaces*/
+    color: #bf1815; /*Color de los enlaces*/
+    line-height: 2; /*espacio entre lineas*/
+    display: block; /*Hacer que los enlaces ocupen todo el ancho*/
+    transition: background 0.3s ease, transform 0.2s; /*Transición suave para el cambio de color de fondo*/
+}
+
+aside a:hover {
+    background: #b18d8d;  /*Color de fondo al pasar el mouse*/
+    transform: scale(1.05); /*Efecto de zoom al pasar el mouse*/
+}
+/*Main*/
+main{
+grid-area: main; /*Asignacion al área principal*/
+background-color: rgba(0, 0, 0, 0.5);/* fondo negro traslucido*/
+padding: 30px; /*Espaciado interno*/
+border-radius: 10px; /*Border redondeados*/
+
+}
+
+/* Hero SEction */
+
+.hero {
+    background-color: rgba(255, 255, 255, 0.1); /*Fondo translucido claro*/
+    padding: 20px; /*Espaciado interno*/
+    border-left: 5px solid #fff; /* linea decorativa a la izquierda*/
+    margin-bottom: 20px; /*Separacion con la siguiente seccion*/
+}
+
+.cards {
+    display: flex; /*Distribuye las tarjetas horizontalmente*/
+    flex-wrap: wrap;/*Permite que se acomoden en varias filas*//*error en escritura dle wrap*/
+    gap: 20px; /*Espacio entre tarjetas*/
+}   
+
+.card {
+    flex: 1; /*Se adapta al espacio disponible*/
+    min-width: 250px; /* Ancho minimo para que no se encojan demasiado*/
+    background-color: rgba(255, 255, 255, 0.1); /*Fondo translucido claro*/
+    border-radius: 10px; /*Bordes redondeados*/
+    padding: 20px; /*Espaciado interno*/
+    transition: transform 0.3s ease; /* Transicion suave al pasar el mause*/
+
+
+}
+
+.card img {
+    max-width: 100%; /*Asegura que la imagen no se salga del contenedor*/
+    border-radius: 10px; /*Bordes redondeados para la imagen*/
+    margin-bottom: 10px; /*Espacio debajo de la imagen*/
+}
+
+.card.zoom:hover { /*error al llamar la clase zoom ademas debe ir junto*/
+    transform: scale(1.05); /*Efecto de zoom al pasar el mouse*/
+}
+
+.video-container {
+    position: relative; /*Posicionamiento relativo para el video*/
+    padding-bottom: 56.25%; /*Relación de aspecto 16:9*/
+    height: 0; /*Altura cero para mantener la relación de aspecto*/ /*nos impide el efecto zoom*/
+    border-radius: 10px; /*Bordes redondeados*/
+}
+
+.video-container iframe {
+    position: absolute;
+    top:auto; /*Posiciona el iframe en la parte superior*/
+    left: 0; /*Posiciona el iframe a la izquierda*/
+    width: 100%; /*Ancho completo del contenedor*/
+    height: 100%; /*Altura completa del contenedor*/
+    border: none; /*Quita el borde del iframe*/
+}
+
+/* Footer */
+footer{ /*error corregido footer mal escrito*/
+    grid-area: footer; /*Área del pie de pagina*/
+    background: #111; /*fondo oscuro*/
+    padding: 20px; /* Centrado del texto*/ /*error de escritura en el padding*/
+    position: relative; /*Permite posicionamiento absoluto de elementos hijos*/
+    
+
+}
+
+.scroll-text{
+    position: absolute; /* Posicionamiento absoluto para el texto*/
+    bottom: 5px; /*faltaba punto y coma*/
+    width: 100%; /*Ancho completo*/
+    color: #ffcd00; /*Amarillo Brillante*/
+    animation: scrollText 10s linear infinite; /*Animación de desplazamiento infinito*/
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /*Comienza fuera de la pantalla a la derecha*/
+    }
+    100% {
+        transform: translateX(-100%); /*Termina fuera de la pantalla a la izquierda*/
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .layout-grid {
+        grid-template-areas:
+        "main"
+        "aside"
+        "footer"; /*Reorganiza el grid para pantallas pequeñas*/
+        grid-template-columns: 1fr; /*Una sola columna*/
+    }
+
+    .nav-links {
+        flex-direction: column; /*Cambia la dirección de los enlaces a columna*/
+        gap: 10px; /*Reduce el espacio entre enlaces*/
+    }
+}
+
+/*Eres un crack*/

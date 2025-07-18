@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- Define que es un documento HTML5 -->
+<html lang="es">
+  <!-- Define el idioma del documento como español -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configura la vista para dispositivos móviles -->
+    <title>Sitio Web Semantico Responsivo</title>
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Enlaza el archivo CSS para estilos -->
+    <link
+      rel="shortcut icon"
+      href="Favicon con letras _UES_.png"
+      type="image/x-icon"
+    />
+    <!-- icono que aparece en la pestaña -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Enlaza la fuente Poppins desde Google Fonts -->
+    <meta
+      name="description"
+      content="Sitio web semántico y responsivo para la Universidad Estatal de Sonora."
+    />
+    <!-- Descripción del sitio web para SEO -->
+  </head>
+  <body>
+    <header>
+      <h1>Universidad de El Salvador</h1>
+      <!-- Título principal del sitio -->
+      <nav>
+        <!-- menu de navegacion -->
+        <ul class="nav-links">
+          <!-- Lista de enlaces de navegación -->
+          <li><a href="#">Inicio</a></li>
+          <!-- Enlace a la sección de inicio -->
+          <li>
+            <a href="https://naturales.ues.edu.sv/matematica/carreras-pregrado/"
+              >Carreras</a
+            >
+          </li>
+          <!-- Enlace a la sección acerca de carreras -->
+          <li>
+            <a
+              href="https://eluniversitario.ues.edu.sv/category/cienciaytecnologia/proyectos/"
+              >Proyectos</a
+            >
+          </li>
+          <!-- Enlace a la sección de proyectos -->
+          <li><a href="contacto.html">Contacto</a></li>
+          <!-- Enlace a la sección de contacto -->
+        </ul>
+      </nav>
+    </header>
+
+<div class="layout-grid"><!-- Contenedor principal con Grid -->
+    <aside>
+      <h2>Accesos Directos</h2>
+      <ul>
+        <li><a href="https://biblioteca.ues.edu.sv/">Biblioteca</a></li>
+        <li><a href="https://flexboxlabs.netlify.app/">Laboratorio</a></li>
+        <li>
+          <a href="https://calendar.google.com/calendar/u/0/r/month">Calendario</a
+          > <!--errores corregidos en los enlaces-->
+        </li>
+      </ul>
+    </aside>
+
+    <main>
+      <!-- Contenido principal -->
+      <section class="hero">
+        <!-- Sección principal destacada -->
+        <h2>Bienvenido a la Universidad de El Salvador</h2>
+        <!-- Título de bienvenida -->
+        <p>Explora nuestras carreras, proyectos y más.</p>
+        <!-- Descripción breve -->
+      </section>
+
+      <section class="cards">
+        <!-- Seccion con tarjetas -->
+        <div class="card zoom">
+          <!-- Tarjeta con efecto zoom -->
+          <img
+            src="https://images.pexels.com/photos/4145196/pexels-photo-4145196.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300"
+            alt="Educación"
+          />
+          <!-- Imagen de la tarjeta -->
+          <h3>Curso HTML y CSS</h3>
+          <!-- Título de la tarjeta -->
+          <p>Aprende a crear sitios web responsivos con HTML y CSS.</p>
+          <!-- Descripción de la tarjeta -->
+        </div>
+        <div
+          class="card zoom"
+          style="padding: 20px; border: 1px solid #ccc; border-radius: 10px"
+        >
+          <!-- Tarjeta con efecto zoom y estilo personalizado -->
+          <h2 style="font-size: 1.5rem; margin: 0 0 10px">
+            Video introductorio
+          </h2>
+          <p style="line-height: 1.6; font-size: 1rem; margin-bottom: 20px">
+            Esperamos sea de su agrado, este curso preparado con mucho
+            entusiasmo para ustedes.</p>
+        
+            <div class="video-container">
+                <iframe src="https://youtube.com/embed/-kgGATnsPbs?si=_1ZBLWLpuYbOFz86"
+                title="Aprendiendo Grid"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+            <p style="line-height: 1.6; font-size: 1rem; margin-bottom: 20px">
+              Este video es una introducción al curso y cubre los conceptos básicos de CSS Grid./Este esun ejemplo de como puedes incrustar tus videos de youtube a tu pagina web de forma sencilla, solo dedes copiar el enlace del video y pegarlo en tu codigo HTML.
+            </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Pie de página -->
+      <p>&copy; 2025 Universidad de El Salvador. Todos los derechos reservados.</p>
+      <!-- Derechos de autor -->
+      <p>Desarrollado por [JeoApa]</p>  
+      <!-- Información del desarrollador -->
+       <div class="scroll-text">!Estudia programacion web en la UES!
+       </div>
+    </footer>
+</div>
+  </body>
+</html>
