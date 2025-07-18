@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de contacto</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="color"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .group {
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    .boton {
+      display: inline-block;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <h1>Formulario de contacto</h1>
+      <a class="boton" href="index.html">Inicio</a>
+    <div class="group">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required>
+    </div>
+
+    <div class="group">
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+    </div>
+
+    <div class="group">
+      <label>Género:</label>
+      <input type="radio" id="masculino" name="genero" value="Masculino">
+      <label for="masculino">Masculino</label><br>
+      <input type="radio" id="femenino" name="genero" value="Femenino">
+      <label for="femenino">Femenino</label>
+    </div>
+
+    <div class="group">
+      <label>Intereses:</label>
+      <input type="checkbox" id="html" name="interes" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="checkbox" id="css" name="interes" value="CSS">
+      <label for="css">CSS</label>
+    </div>
+
+    <div class="group">
+      <label for="color">Color favorito:</label>
+      <input type="color" id="color" name="color">
+    </div>
+
+    <div class="group">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escriba su mensaje aquí..."></textarea>
+    </div>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+</body>
+</html>
